@@ -3,14 +3,14 @@ require('dotenv').config();
 module.exports = {
   development: {
     username: 'root',
-    password: 's109504',
+    password: process.env.SEQUELIZE_PASSWORD,
     database: 'final',
     host: '127.0.0.1',
     dialect: 'mysql',
   },
   test: {
     username: "root",
-    password: 's109504',
+    password: process.env.SEQUELIZE_PASSWORD',
     database: "final_test",
     host: "127.0.0.1",
     dialect: "mysql"
@@ -18,7 +18,7 @@ module.exports = {
   production: {
     username: 'root',
     password: null,
-    database: 'database_production',
+    database: process.env.SEQUELIZE_PASSWORD,
     host: '127.0.0.1',
     dialect: 'mysql',
     logging: false,
